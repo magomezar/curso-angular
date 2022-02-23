@@ -1,0 +1,26 @@
+<div class="container" role="document">
+
+<app-cabecera></app-cabecera>
+<router-outlet></router-outlet>
+
+
+<!--  Ejercicio ngClass
+  <div [ngStyle]="{'background':color ? color:'red'}">Hola mundo!</div>
+  <button (click)="color = 'yellow'" [ngClass]="{'activoyellow': color == 'yellow'}">Amarillo</button>
+  <button (click)="color = 'blue'" [ngClass]="{'activoblue': color == 'blue'}">Azul</button>
+  <button (click)="color = 'green'" [ngClass]="{'activogreen': color == 'green'}">Verde</button>>-->
+
+<!--  Ejercicio ngFor-->
+  <!--<ul>
+    <li *ngFor="let libro of libros">
+      <a (click)="showAuthor(libro)">
+      <a href="https://www.google.com/search?q={{libro.titulo}}">--Otro tipo, enlace con query google
+      {{libro.titulo}}</a>
+    </li>
+
+    <li *ngFor="let libro of libros; index as indice; first as primero; last as ultimo">
+      {{indice}}-{{libro.titulo}}<span *ngIf="indice == 1"><b> #Best Seller</b></span><span *ngIf="ultimo"><b> #Ruina</b></span>
+    </li>
+  </ul>-->
+
+</div>
