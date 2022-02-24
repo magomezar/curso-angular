@@ -9,25 +9,26 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 })
 export class LibrosComponent implements OnInit {
 
-  //verAutor!: string;
+  verAutor!: string;
   libros: any;
   errorHttp!: boolean;
+  cargando!: boolean;
 
   constructor(private http: HttpClient, public LibroClicked: LibroclickedService) {
     
   }
 
-  ngOnInit(): void {
-    this.cargarLista();
-  }
-  //return this.http.post(this.apiUrl+url,request).subscribe(
-    //(response) => {return response.json()}
 
   cargarLista() {
-    return this.http.get('assets/lista-libros.json').subscribe(
-      //(respuesta: Response) => { this.libros = respuesta; },
-      //(respuesta: Response) => { this.errorHttp = true; }
+    return this.http.get('assets/lista-libro.json').subscribe(
+      (respuesta: any) => { this.libros = respuesta; this.cargando = false; },
+      (respuesta: Response) => { this.errorHttp = true; this.cargando = false; }
     )
+  }
+
+  ngOnInit(): void {
+    this.cargando = true;
+    this.cargarLista();
   }
   /*constructor() {
     this.libros = [
@@ -45,6 +46,6 @@ export class LibrosComponent implements OnInit {
 
  
   agregarLibro(_libroVisto: any) {
-    this.LibroClicked.libroVisto(_libroVisto);
+    this.LibroClicked. libroVisto(_libroVisto);
   }
 }

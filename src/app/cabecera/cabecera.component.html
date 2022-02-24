@@ -2,3 +2,10 @@
     <a class="button" href="/">Inicio</a>
     <a class="button" [routerLink]="['/listado-libros']" routerLinkActive="myclass">Listado libros</a>
 </p>
+
+ 
+
+<h2>Libros vistos</h2>
+<ul *ngIf="librosVistos.verListado()">
+    <li *ngFor="let libro of librosVistos.verListado()">{{libro.titulo}}</li>
+</ul>

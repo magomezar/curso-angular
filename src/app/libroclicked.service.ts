@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LibroclickedService {
 
-  libros: Array<object>;
+  libros: any;//Cambio object por any
 
   constructor() { 
     this.libros = [];
@@ -16,7 +16,7 @@ export class LibroclickedService {
   }
 
   verListado() {
-    if (this.libros.length > 0) {
+    if (this.libros.length > 0) { //Quito todo el if else
       return this.libros;
     } else {
       return false;
