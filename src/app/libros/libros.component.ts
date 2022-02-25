@@ -20,7 +20,7 @@ export class LibrosComponent implements OnInit {
 
 
   cargarLista() {
-    return this.http.get('assets/lista-libro.json').subscribe(
+    return this.http.get('assets/lista-libros.json').subscribe(
       (respuesta: any) => { this.libros = respuesta; this.cargando = false; },
       (respuesta: Response) => { this.errorHttp = true; this.cargando = false; }
     )

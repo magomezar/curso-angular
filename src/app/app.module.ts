@@ -15,11 +15,14 @@ import { LibrosComponent } from './libros/libros.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { InformacionComponent } from './informacion/informacion.component';
+import { RenderdemoComponent } from './renderdemo/renderdemo.component';
+
 
 
 const rutas:Routes = [
   {path: '', component: InicioComponent, pathMatch: 'full'},
   {path: 'listado-libros', component: LibrosComponent},
+  {path: 'renderer2', component: RenderdemoComponent},
   {path:'informacion/:libroId', component: InformacionComponent},
   {path: 'informacion', redirectTo: '/'},
   {path: '**', redirectTo: '/'}
@@ -35,7 +38,8 @@ const rutas:Routes = [
     SobreNosotrosComponent,
     LibrosComponent,
     CabeceraComponent,
-    InicioComponent
+    InicioComponent,
+    RenderdemoComponent
   ],
   imports: [
     BrowserModule,
