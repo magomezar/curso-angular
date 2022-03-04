@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 
+
 @Component({
   selector: 'app-renderdemo',
   templateUrl: './renderdemo.component.html',
@@ -9,6 +10,8 @@ export class RenderdemoComponent implements OnInit {
 
   alumnos: Array<any>;
   clearElement!: HTMLElement;
+  botonActivar! : boolean;
+  
 
   constructor(private ren: Renderer2) { 
     this.alumnos = [
@@ -26,8 +29,20 @@ export class RenderdemoComponent implements OnInit {
     if (this.clearElement) {
       this.ren.removeClass(this.clearElement, 'miClass')
     }
+    
+    let nuevoElemento = this.ren.createElement('span');
+    this.ren.setProperty(nuevoElemento, 'innerHTML', '✅');
+    this.ren.appendChild(elemen, nuevoElemento);
+
+    this.ren.setAttribute(elemen, 'data-select', 'true');
     this.ren.addClass(elemen, 'miClass');
-    this.clearElement = elemen;
+    
+    this.clearElement = elemen; 
   }
+
+  mostrarAlert(nuevoElemento:HTMLElement){
+    alert("prueba");
+  }
+
 
 }

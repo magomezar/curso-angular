@@ -6,3 +6,6 @@ li {
     padding: 10px;
     color: white;
 }
+li[data-select="true"]:not(.miClass) {
+    background: #a855f1;
+}

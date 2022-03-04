@@ -46,6 +46,6 @@ export class LibrosComponent implements OnInit {
 
  
   agregarLibro(_libroVisto: any) {
-    this.LibroClicked. libroVisto(_libroVisto);
+    this.LibroClicked.libroVisto(_libroVisto);
   }
 }

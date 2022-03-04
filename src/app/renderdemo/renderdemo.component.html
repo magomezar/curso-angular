@@ -1,6 +1,18 @@
 <ul>
+    <!--<li #elementoDOM (click)="activeMethod(elementoDOM)" *ngFor="let alumno of alumnos">{{alumno.nombre}}</li>-->
     <li #elementoDOM (click)="activeMethod(elementoDOM)" *ngFor="let alumno of alumnos">{{alumno.nombre}}</li>
 </ul>
+
+
+
+<!--<li *ngFor="let libro of libros">
+    <a (click)="agregarLibro(libro)"
+    [routerLink]="['/informacion', libro.id]">
+    {{libro.titulo}}</a>
+  </li> *ngIf="crearBoton"-->
+
+
+
 
 
 
